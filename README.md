@@ -1,2 +1,2 @@
-# Curso_python
+# Estudo de Python
  Backup dos códigos do curso de programação python completo do zero ao avançado com projetos reais do André  acono
