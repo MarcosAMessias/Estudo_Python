@@ -1,0 +1,18 @@
+try:
+    entrada1 = float(input('Digite o primeiro valor: \n'))
+    entrada2 = float(input("Digite o segundo valor: \n"))
+except ValueError:
+    print('Vamos tentar apenas com números?\U0001f595')
+
+def calculadora(entrada1,entrada2):
+    print(f'A soma é:', entrada1 + entrada2)
+    print(f'A divisãosubtração é: ', entrada1 - entrada2)
+    print(f'A multiplicação é: ', entrada1 * entrada2)
+    try:
+        print(f'A divisão é: ', entrada1 / entrada2)
+    except ZeroDivisionError:
+        print('Não consigo dividir por zero')
+    finally:
+        print('Obrigado pelo uso deste aplicativo de calculadora. \U0001F609')
+
+calculadora(entrada1, entrada2)
