@@ -1,4 +1,4 @@
-def main():
+def calc():
     while True:
         try:
             entrada1 = float(input('Digite o primeiro valor: \n'))
@@ -20,6 +20,5 @@ def calculadora(entrada1, entrada2):
         print('Obrigado por usar este aplicativo de calculadora! \U0001F609')
 
     if __name__ == "__main__":
-        main()
-    
-main()
+        calc()
+calc()
