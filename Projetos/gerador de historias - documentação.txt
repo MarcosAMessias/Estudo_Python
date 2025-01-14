@@ -1,0 +1,20 @@
+1. Regras de Negócio:
+O programa permite que o usuário gere histórias aleatórias com base em categorias predefinidas.
+As histórias geradas devem ser compostas por personagem, cenário, acontecimento e fim.
+O programa deve garantir que o usuário não insira entradas inválidas para criar as histórias.
+O banco de dados será apenas utilizado para armazenar histórias geradas, se necessário.
+O programa precisa perguntar ao usuário se deseja continuar gerando histórias.
+ ------------------------------------------------------------
+2. Requisitos Funcionais:
+Funcionalidade 1: O sistema deve ser capaz de gerar histórias aleatórias baseadas em categorias predefinidas (personagens, cenários, acontecimentos e finais).
+Funcionalidade 2: O usuário pode interagir para solicitar uma nova história com a opção sim ou não.
+Funcionalidade 3: O sistema deve apresentar histórias formadas por combinações aleatórias.
+Funcionalidade 4: O sistema precisa validar que a entrada do usuário está no formato correto (sim ou não).
+Funcionalidade 5: O sistema não pode deixar o programa travado após a execução de cada história.
+---------------------------------------------------------------------
+3. Requisitos Não Funcionais:
+Desempenho: O sistema deve ser capaz de gerar histórias de maneira ágil, sem lentidão, mesmo ao manipular listas e escolhas aleatórias.
+Manutenibilidade: O código deve ser fácil de entender e modificar para futuras expansões do programa.
+Portabilidade: O sistema deve funcionar em qualquer ambiente que suporte Python (Windows, macOS, Linux).
+Segurança: O programa não deve conter falhas que permitam a entrada de dados maliciosos ou qualquer forma de ataques.
+Interoperabilidade: O sistema pode funcionar com outras bibliotecas básicas do Python, sem depender de bibliotecas externas.
