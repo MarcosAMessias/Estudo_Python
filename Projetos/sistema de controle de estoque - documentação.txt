@@ -1,0 +1,21 @@
+Regras de Negócio
+1.Cada produto deve ter um código único para identificação no estoque.
+2. Não é permitido registrar um produto com estoque negativo.
+3. Produtos desativados não devem ser exibidos na listagem principal do estoque.
+4. Toda entrada ou saída de produtos deve ser registrada com data e motivo.
+5. Um alerta deve ser gerado se o estoque de um produto atingir ou ficar abaixo do nível mínimo definido.
+----------------------------------------------------------
+Requisitos Funcionais
+1. O sistema deve permitir adicionar novos produtos ao estoque, incluindo informações como nome, código, quantidade inicial, preço e nível mínimo de estoque.
+2. O sistema deve possibilitar a visualização de todos os produtos cadastrados e seus detalhes.
+3. O sistema deve permitir atualizar as informações de um produto existente.
+4. O sistema deve permitir registrar saídas e entradas de produtos no estoque.
+5. O sistema deve incluir uma função para buscar produtos pelo nome ou código.
+6. O sistema deve gerar relatórios com histórico de movimentações (entradas e saídas) para cada produto.
+-----------------------------------------------------------
+Requisitos Não Funcionais
+1. O sistema deve salvar os dados de maneira persistente, utilizando banco de dados SQLite ou arquivos.
+2. O sistema deve ser acessível por meio de uma interface simples no terminal.
+3. O tempo de resposta para buscas e operações no estoque deve ser inferior a 1 segundo.
+4. Os dados salvos devem ser protegidos contra alterações manuais indevidas.
+5. O sistema deve ser capaz de lidar com pelo menos 1.000 produtos sem degradação perceptível no desempenho.
