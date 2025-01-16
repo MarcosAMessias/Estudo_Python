@@ -1,0 +1,66 @@
+Regras de Negócio
+
+Escolha da palavra:
+A palavra deve ser selecionada aleatoriamente de uma lista predefinida associada a uma categoria.
+Cada categoria deve ter pelo menos 5 palavras.
+
+Categorias:
+O jogador deve selecionar uma categoria antes de iniciar o jogo.
+Categorias devem ser exibidas de forma clara e legível.
+
+Nível de dificuldade:
+O número de tentativas é baseado no nível de dificuldade escolhido:
+Fácil: 10 tentativas.
+Médio: 6 tentativas.
+Difícil: 4 tentativas.
+
+Tentativas:
+Cada letra errada reduz o número de tentativas restantes.
+Letras já tentadas (certas ou erradas) não devem ser consideradas novamente.
+
+Condições de vitória e derrota:
+O jogador vence ao adivinhar todas as letras da palavra antes de esgotar as tentativas.
+O jogo termina com derrota se o jogador não adivinhar a palavra e as tentativas chegarem a zero.
+-----------------------------------------------------------
+Requisitos Funcionais
+
+Interface do usuário:
+O jogo deve exibir claramente as letras acertadas, as letras erradas, e a quantidade de tentativas restantes.
+Deve mostrar as categorias disponíveis para seleção.
+
+Entrada do usuário:
+Permitir que o jogador insira uma única letra por tentativa.
+Validar se a entrada é uma letra válida e informar o jogador caso contrário.
+
+Seleção de dificuldade:
+Oferecer ao jogador opções de dificuldade antes de iniciar o jogo.
+
+Processamento do jogo:
+Atualizar a palavra oculta à medida que o jogador acerta as letras.
+Manter listas separadas para letras corretas e incorretas.
+
+Encerramento do jogo:
+Exibir uma mensagem de vitória ao jogador que adivinhar a palavra.
+Informar a palavra correta em caso de derrota.
+-----------------------------------------------------------
+Requisitos Não Funcionais
+
+Desempenho:
+O jogo deve responder rapidamente às entradas do jogador, sem atrasos perceptíveis.
+
+Portabilidade:
+Deve ser executável em qualquer sistema que suporte Python 3 (Windows, macOS, Linux).
+
+Manutenção:
+O código deve ser modular (com funções bem definidas), facilitando a adição de novas categorias ou palavras.
+
+Usabilidade:
+Mensagens de erro e orientações claras devem ser fornecidas para o jogador.
+O jogo deve ser fácil de entender e jogar, mesmo para usuários sem experiência prévia.
+
+Confiabilidade:
+Garantir que a escolha de palavras seja verdadeiramente aleatória.
+Evitar falhas ou interrupções durante o jogo.
+
+Extensibilidade:
+O sistema deve permitir adicionar novas categorias e palavras sem necessidade de grandes modificações no código.

@@ -1,0 +1,37 @@
+Regras de Negócio:
+1. Cadastro de Livros: Cada livro deve ter título, autor, gênero e um identificador único.
+2. Cadastro de Usuários: Cada usuário deve ter um nome, e-mail e identificador único.
+3. Empréstimos: Um usuário pode pegar no máximo 3 livros emprestados ao mesmo tempo.
+4. Devolução: Livros emprestados devem ser devolvidos em até 14 dias, caso contrário, o sistema deve sinalizar o atraso.
+5. Disponibilidade: Apenas livros disponíveis podem ser emprestados.
+----------------------------------------------------
+Requisitos Funcionais:
+1. O sistema deve permitir o cadastro, visualização, edição e remoção de livros.
+2. O sistema deve permitir o cadastro, visualização, edição e remoção de usuários.
+3. O sistema deve registrar empréstimos de livros para usuários.
+4. O sistema deve permitir o registro de devoluções e atualizar o status dos livros.
+5. O sistema deve listar livros disponíveis e emprestados, além de exibir os usuários com empréstimos em atraso.
+------------------------------------------------------
+Requisitos Não Funcionais:
+1. O sistema deve ser simples e intuitivo de usar, com menus bem organizados.
+2. Deve ser possível utilizar o sistema em diferentes dispositivos sem necessidade de instalação prévia (Python script).
+3. O armazenamento das informações deve ser seguro e confiável, utilizando um banco de dados SQLite.
+4. O sistema deve carregar os dados e responder a comandos em menos de 2 segundos.
+-------------------------------------------------------
+MoSCoW:
+
+Must Have (Deve Ter):
+Cadastro de livros e usuários.
+Registro e controle de empréstimos e devoluções.
+Exibição de listas de livros e usuários.
+
+Should Have (Deveria Ter):
+Alerta para usuários com devoluções atrasadas.
+Filtro para listar livros por gênero ou autor.
+
+Could Have (Poderia Ter):
+Relatórios de utilização, como o livro mais emprestado.
+Exportação de dados em formato CSV.
+
+Won’t Have (Não Terá por Agora):
+Integração com serviços online ou biblioteca de terceiros.
