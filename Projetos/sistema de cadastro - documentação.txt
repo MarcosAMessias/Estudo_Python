@@ -1,0 +1,55 @@
+Regras de Negócio
+
+1. Cadastro de Produtos:
+-O produto deve ter os seguintes atributos obrigatórios:
+-Nome (não pode ser vazio).
+-Descrição.
+-Valor (deve ser um número válido maior ou igual a zero).
+-A disponibilidade deve ser indicada como "Sim" ou "Não".
+
+2. Listagem de Produtos:
+-Os produtos devem ser listados ordenados pelo valor, do menor para o maior.
+-Devem ser exibidos apenas o nome e o valor na listagem inicial.
+
+3. Redirecionamento Após Cadastro:
+-Após cadastrar um produto, o sistema deve redirecionar automaticamente para a listagem.
+
+4. Continuidade da Operação:
+O usuário pode optar por cadastrar um novo produto ou sair do sistema após visualizar a listagem.
+------------------------------------------------------------------
+Requisitos Funcionais
+
+1. Cadastro de Produtos:
+-O sistema deve permitir ao usuário cadastrar um produto preenchendo os campos:
+ Nome.
+ Descrição.
+ Valor.
+ Disponibilidade para venda.
+
+2. Listagem de Produtos:
+-O sistema deve exibir os produtos cadastrados em uma tabela simples, ordenados pelo valor.
+
+3. Controle de Fluxo:
+-Após o cadastro, o sistema deve redirecionar para a listagem automaticamente.
+-Na listagem, o sistema deve oferecer opções para cadastrar um novo produto ou encerrar a operação.
+
+4. Validação:
+-O sistema deve validar que o valor inserido é numérico.
+-Deve tratar entradas inválidas, como valores vazios ou fora do formato esperado.
+-----------------------------------------------------------------------------
+Requisitos Não Funcionais
+
+1. Interatividade Simples:
+-O sistema deve funcionar no terminal, com interação baseada em entradas do usuário.
+
+2. Desempenho:
+-O sistema deve ser capaz de lidar com múltiplos cadastros e listagens em tempo real, utilizando apenas recursos de memória (sem banco de dados).
+
+3. Portabilidade:
+-O sistema deve ser escrito em Python puro, sem dependências externas, para facilitar sua execução em qualquer ambiente.
+
+4.Usabilidade:
+-As mensagens devem ser claras e informativas, guiando o usuário por todas as etapas.
+
+5. Organização:
+-O código deve ser legível, com funções separadas para cada funcionalidade principal (cadastro e listagem).
