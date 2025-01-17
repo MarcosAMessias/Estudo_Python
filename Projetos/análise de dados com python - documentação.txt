@@ -1,0 +1,16 @@
+Regras de Negócio
+O sistema deve processar arquivos CSV ou Excel com dados para análise.
+Os dados devem ser validados antes da análise (ex.: verificar valores ausentes ou inválidos).
+O usuário pode escolher métricas específicas para calcular (ex.: média, mediana, desvio padrão).
+Deve ser possível gerar visualizações como gráficos de barras e linhas para apresentar os resultados.
+
+Requisitos Funcionais
+Permitir a leitura de arquivos CSV ou Excel.
+Calcular estatísticas descritivas (média, mediana, máximo, mínimo, etc.).
+Gerar gráficos a partir dos dados carregados.
+Exibir um resumo da análise para o usuário.
+
+Requisitos Não Funcionais
+O sistema deve processar arquivos com até 100 MB em menos de 5 segundos.
+A interface (mesmo que de terminal) deve ser amigável, exibindo mensagens claras.
+O código deve ser modular e bem comentado para facilitar a manutenção.
