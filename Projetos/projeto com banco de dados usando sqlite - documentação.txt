@@ -1,0 +1,41 @@
+Regras de Negócio
+O sistema deve permitir que usuários insiram dados sobre clientes, produtos ou pedidos.
+Cada cliente deve ter um identificador único, nome e contato.
+Produtos devem ter identificadores únicos, nomes, preços e quantidades em estoque.
+É obrigatório que os pedidos contenham ao menos um produto associado.
+O sistema deve garantir a integridade referencial, impedindo que registros órfãos sejam criados (por exemplo, um pedido sem cliente).
+-------------------------------------------
+Requisitos Funcionais
+Permitir a criação de tabelas para armazenar clientes, produtos e pedidos.
+Inserir, atualizar e excluir registros em cada tabela.
+Consultar dados filtrados, como:
+Todos os pedidos de um cliente específico.
+Produtos com estoque abaixo de um determinado valor.
+Exibir relatórios básicos, como:
+Total de vendas por cliente.
+Produto mais vendido.
+Permitir a exportação dos dados ou relatórios para arquivos CSV.
+-----------------------------------------
+Requisitos Não Funcionais
+O sistema deve utilizar SQLite como banco de dados, garantindo simplicidade e portabilidade.
+As consultas e operações no banco de dados devem ser realizadas em menos de 1 segundo para até 10.000 registros.
+O sistema deve ter uma interface no terminal simples e fácil de navegar.
+Deve haver validação para entradas do usuário (como evitar entradas inválidas, duplicadas ou vazias).
+----------------------------------------
+Metodologia MoSCoW
+
+Must Have (Deve Ter):
+Criação de tabelas (clientes, produtos e pedidos).
+Inserir e consultar registros.
+Relatório básico: total de vendas por cliente.
+
+Should Have (Deveria Ter):
+Atualizar e excluir registros.
+Relatório de produtos mais vendidos.
+
+Could Have (Poderia Ter):
+Exportar relatórios para CSV.
+Consultar pedidos por faixa de data.
+
+Won’t Have (Não Terá por Agora):
+Interface gráfica ou integração com APIs externas.
