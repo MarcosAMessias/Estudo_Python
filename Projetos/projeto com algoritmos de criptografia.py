@@ -103,4 +103,20 @@ def main():
             operacao = input("Operação (criptografar/descriptografar): ").strip().lower()
             print("Resultado:", base64_operacao(texto, operacao))
         elif escolha == "3":
-            print
+            print(" ******  Criptografia Simétrica(AES) *****")
+            texto = input("Texto: ")
+            chave = input("Chave (ou pressione Enter para gerar uma nova): ").strip()
+            if not chave:
+                chave = gerar_chave() # Gera uma nova chave se o usuário não informar
+                print("Nova chave gerada: ", chave)
+            operacao = input("Operação (criptografar/descriptografar): ").strip().lower()
+            print("Resultado:", criptografia_simetrica(texto, chave, operacao))
+        elif escolha =="4":
+            print("Encerrando o programa...") # Mensagem de saída
+            break
+        else:
+            print("Opção inválida. Tente novamente.") # Mensagem de erro para entradas inválidas
+
+# Inicia o programa se executado diretamente
+if __name__ == "__main__":
+    main()
