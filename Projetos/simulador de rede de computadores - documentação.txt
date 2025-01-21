@@ -1,0 +1,25 @@
+Regras de Negócio (RN):
+RN01: Cada dispositivo deve ter um endereço IP único dentro da mesma sub-rede.
+RN02: Um pacote só pode ser enviado para um dispositivo se o endereço IP do destino estiver configurado corretamente.
+RN03: A máscara de sub-rede deve ser validada ao ser configurada nos dispositivos.
+RN04: O envio de pacotes deve levar em conta tabelas de roteamento, e pacotes com rotas inválidas devem ser descartados.
+RN05: A remoção de um dispositivo deve atualizar automaticamente a topologia da rede e tabelas de roteamento associadas.
+RN06: Logs de erros e eventos devem ser salvos automaticamente em arquivos de texto para análise posterior.
+------------------------------------------------------------------
+Requisitos Funcionais (RF):
+RF01: O sistema deve permitir adicionar dispositivos à rede, como computadores, roteadores e switches.
+RF02: O usuário deve poder configurar endereços IP e máscaras de sub-rede para os dispositivos.
+RF03: O sistema deve simular o envio de pacotes entre dispositivos, exibindo o trajeto e validando se os pacotes chegam ao destino.
+RF04: O sistema deve calcular rotas para os pacotes, considerando tabelas de roteamento nos dispositivos.
+RF05: O usuário deve poder visualizar a topologia da rede como um gráfico interativo.
+RF06: O sistema deve exibir logs detalhados da comunicação, incluindo erros como pacotes perdidos ou IPs inválidos.
+RF07: O sistema deve permitir a remoção de dispositivos da rede.
+RF08: O simulador deve suportar ao menos três tipos de protocolos de rede, como ICMP, TCP e UDP.
+--------------------------------------------------------------------
+Requisitos Não Funcionais (RNF):
+RNF01: O sistema deve ser desenvolvido em Python utilizando bibliotecas como NetworkX e Tkinter para interface gráfica e visualização.
+RNF02: O sistema deve ser compatível com sistemas operacionais Windows, Linux e macOS.
+RNF03: O desempenho do simulador deve permitir o processamento de redes com até 100 dispositivos sem degradação perceptível.
+RNF04: O sistema deve armazenar as configurações de rede em arquivos JSON para que possam ser carregadas em execuções futuras.
+RNF05: A interface gráfica deve ser intuitiva, com menus organizados e mensagens claras para o usuário.
+RNF06: Deve ser possível exportar a topologia da rede em formato de imagem ou PDF.
