@@ -1,0 +1,58 @@
+Regras de Negócio (RN)
+
+Códigos de moeda válidos:
+RN1: Apenas moedas com códigos reconhecidos pelas APIs podem ser utilizadas (conforme o padrão ISO 4217).
+
+Prioridade de APIs:
+RN2: A API do Exchangerate.host deve ser usada como a principal. Caso não esteja disponível, a API Open Exchange Rates será utilizada como backup.
+
+Taxas de câmbio confiáveis:
+RN3: Se nenhuma taxa de câmbio válida for retornada, o sistema deve informar ao usuário que a conversão não foi possível.
+
+Conversão de valores:
+RN4: O cálculo do valor convertido deve ser feito multiplicando o valor na moeda de origem pela taxa de câmbio obtida.
+
+Validação de entrada:
+RN5: O sistema deve validar as entradas do usuário, garantindo que o valor seja numérico e os códigos das moedas estejam no formato correto.
+--------------------------------------------------------------------------------
+Requisitos Funcionais (RF)
+
+Obter a taxa de câmbio de uma moeda de origem para uma moeda de destino usando APIs:
+RF1: Utilizar a API do Exchangerate.host para realizar a conversão.
+RF2: Caso a API do Exchangerate.host falhe, utilizar a API Open Exchange Rates como alternativa.
+
+Calcular o valor convertido:
+RF3: Receber o valor na moeda de origem e convertê-lo para a moeda de destino com base na taxa de câmbio obtida.
+
+Entrada de dados do usuário:
+RF4: Permitir que o usuário insira o código da moeda de origem e de destino.
+RF5: Permitir que o usuário insira o valor a ser convertido.
+
+Exibição de resultados:
+RF6: Mostrar o valor convertido para o usuário.
+RF7: Informar a origem dos dados (API utilizada) ou indicar erro caso nenhuma API responda.
+
+Tratamento de erros:
+RF8: Exibir mensagens de erro adequadas quando:
+As APIs não estiverem acessíveis.
+O valor inserido pelo usuário for inválido.
+Não for possível calcular a taxa de câmbio.
+-----------------------------------------------------
+Requisitos Não Funcionais (RNF)
+
+Confiabilidade:
+RNF1: O sistema deve alternar automaticamente entre as APIs disponíveis em caso de falha.
+
+Usabilidade:
+RNF2: A interface do sistema deve ser clara e simples, com mensagens diretas para facilitar a interação do usuário.
+RNF3: O sistema deve aceitar códigos de moedas em formato padrão ISO 4217 (ex.: BRL, USD, EUR).
+
+Desempenho:
+RNF4: O tempo de resposta para obter a taxa de câmbio e realizar a conversão não deve exceder 3 segundos (dependendo da conectividade com as APIs).
+
+Segurança:
+RNF5: O sistema não deve expor diretamente chaves de API em seu código (deve ser armazenada em variáveis de ambiente ou arquivos de configuração seguros).
+
+Portabilidade:
+RNF6: O sistema deve ser executável em qualquer ambiente que suporte Python 3.6+ e tenha acesso à internet.
+----------------------------------------------------------
